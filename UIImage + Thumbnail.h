@@ -1,16 +1,15 @@
 //
-//  UIImage + Thumbnail.h
-//  The Monkey Business
+//  UIImage+Thumbnail.h
 //
-//  Created by Charlie Fish on 4/30/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by Santiago Gonzalez on 4/30/11.
 //
 
 #import <Foundation/Foundation.h>
 
 
-@interface UIImage (UIImage___Thumbnail)
+@interface UIImage (UIImage_Thumbnail)
 
 - (UIImage *)thumbnail;
+- (UIImage *)thumbnailWithWidth:(int)twidth height:(int)theight;
 
 @end

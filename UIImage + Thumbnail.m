@@ -1,38 +1,42 @@
 //
-//  UIImage + Thumbnail.m
-//  The Monkey Business
+//  UIImage+Thumbnail.m
 //
-//  Created by Charlie Fish on 4/30/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by Santiago Gonzalez on 4/30/11.
 //
 
-#import "UIImage + Thumbnail.h"
+#import "UIImage+Thumbnail.h"
 
 
-@implementation UIImage (UIImage___Thumbnail)
+@implementation UIImage (UIImage_Thumbnail)
+
+- (UIImage *)thumbnailWithWidth:(int)twidth height:(int)theight {
+	CGImageRef tmp = self.CGImage;
+	
+    CGColorSpaceRef colorspace = CGImageGetColorSpace(tmp);
+    
+    CGContextRef context = CGBitmapContextCreate(NULL, twidth, theight, CGImageGetBitsPerComponent(tmp), CGImageGetBytesPerRow(tmp)/CGImageGetWidth(tmp)*160, colorspace, CGImageGetAlphaInfo(tmp));
+    
+    if(context == NULL)
+        return self;
+    
+    
+    CGContextDrawImage(context, CGContextGetClipBoundingBox(context), tmp);
+    CGImageRef imgRef = CGBitmapContextCreateImage(context);
+    
+    return [UIImage imageWithCGImage:imgRef];
+}
 
 - (UIImage *)thumbnail {
     CGImageRef tmp = self.CGImage;
 
     CGColorSpaceRef colorspace = CGImageGetColorSpace(tmp);
     
-    CGContextRef context = CGBitmapContextCreate(NULL,
-                                                 240, // Changed this
-                                                 160, // Changed this
-                                                 CGImageGetBitsPerComponent(tmp),
-                                                 CGImageGetBytesPerRow(tmp)/CGImageGetWidth(tmp)*160, // Changed this
-                                                 colorspace,
-                                                 CGImageGetAlphaInfo(tmp));
+    CGContextRef context = CGBitmapContextCreate(NULL, 240, 160, CGImageGetBitsPerComponent(tmp), CGImageGetBytesPerRow(tmp)/CGImageGetWidth(tmp)*160, colorspace, CGImageGetAlphaInfo(tmp));
     
     if(context == NULL)
-        return nil;
-    
-    // Removed clipping code
-    
-    // draw image to context
+        return self;
+	
     CGContextDrawImage(context, CGContextGetClipBoundingBox(context), tmp);
-    
-    // extract resulting image from context
     CGImageRef imgRef = CGBitmapContextCreateImage(context);
     
     return [UIImage imageWithCGImage:imgRef];

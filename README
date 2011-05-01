@@ -1,4 +1,5 @@
 A simple category for creating thumbnails from a UIImage calling object.
+One method makes a thumbnail of hardcoded size and the other method is a parameterized size.
 
 There is no attribution required but is greatly appreciated!
 
