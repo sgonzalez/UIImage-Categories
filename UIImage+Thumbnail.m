@@ -14,7 +14,7 @@
 	
     CGColorSpaceRef colorspace = CGImageGetColorSpace(tmp);
     
-    CGContextRef context = CGBitmapContextCreate(NULL, twidth, theight, CGImageGetBitsPerComponent(tmp), CGImageGetBytesPerRow(tmp)/CGImageGetWidth(tmp)*160, colorspace, CGImageGetAlphaInfo(tmp));
+    CGContextRef context = CGBitmapContextCreate(NULL, twidth, theight, CGImageGetBitsPerComponent(tmp), CGImageGetBytesPerRow(tmp)/CGImageGetWidth(tmp)*theight, colorspace, CGImageGetAlphaInfo(tmp));
     
     if(context == NULL)
         return self;
@@ -31,7 +31,7 @@
 
     CGColorSpaceRef colorspace = CGImageGetColorSpace(tmp);
     
-    CGContextRef context = CGBitmapContextCreate(NULL, 240, 160, CGImageGetBitsPerComponent(tmp), CGImageGetBytesPerRow(tmp)/CGImageGetWidth(tmp)*160, colorspace, CGImageGetAlphaInfo(tmp));
+    CGContextRef context = CGBitmapContextCreate(NULL, 100, 100, CGImageGetBitsPerComponent(tmp), CGImageGetBytesPerRow(tmp)/CGImageGetWidth(tmp)*100, colorspace, CGImageGetAlphaInfo(tmp));
     
     if(context == NULL)
         return self;

@@ -3,6 +3,8 @@ One method makes a thumbnail of hardcoded size and the other method is a paramet
 
 This is super useful for adding images in UITableViewCells and some kind of cover flow view.
 
+Usage.m is a file showing the usage of this category, this is NOT a proper category implementation.
+
 There is no attribution required but is greatly appreciated!
 
 Thanks for downloading,
