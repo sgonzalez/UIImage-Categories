@@ -1,9 +1,3 @@
-//
-//  Usage.m
-//
-//  Copyright 2011 Hicaduda. All rights reserved.
-//
-
 #import "UIImage+Thumbnail.h"
 
 
