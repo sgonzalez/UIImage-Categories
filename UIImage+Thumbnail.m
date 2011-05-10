@@ -5,7 +5,7 @@
 //
 /*
  
- hicaduda.com || http://github.com/sgonzalez/UIImage-Thumbnail-Category
+ hicaduda.com || http://github.com/sgonzalez/UIImage-Categories
  
  Permission is hereby granted, free of charge, to any person
  obtaining a copy of this software and associated documentation

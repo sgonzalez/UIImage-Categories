@@ -1,10 +1,21 @@
 #import "UIImage+Thumbnail.h"
+#import "UIImage+Alpha.h"
+#import "UIImage+RoundedCorner.h"
 
 
-//Create some random image and then make a 100x100 thumbnail of it
+//Image that will be disected! :-)
 UIImage *prettyImage = [UIImage imageNamed:@"MyImage.png"];
+
+//Create a 100x100 thumbnail of it
 UIImage *thumbnailOfImage = [prettyImage thumbnail];
 
-//Create some random image and then make a 250x250 thumbnail of it
-UIImage *prettyImage2 = [UIImage imageNamed:@"MyOtherImage.png"];
-UIImage *thumbnailOfImage2 = [prettyImage thumbnailWithWidth:250 height:250];
+//Create a 250x250 thumbnail of it
+UIImage *sizedThumbnailOfImage = [prettyImage thumbnailWithWidth:250 height:250];
+
+//Check if an image has alpha
+if ([prettyImage hasAlpha]) {
+	//Do something cool here!
+}
+
+//Create an image with rounded corners
+UIImage *roundedImage = [prettyImage roundedCornerImage:30 borderSize:0];

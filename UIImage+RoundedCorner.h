@@ -1,5 +1,5 @@
 //
-//  UIImage+Thumbnail.h
+//  UIImage+RoundedCorner.h
 //
 //  Copyright 2011 Hicaduda. All rights reserved.
 //
@@ -30,12 +30,6 @@
  
  */
 
-#import <Foundation/Foundation.h>
-
-
-@interface UIImage (UIImage_Thumbnail)
-
-- (UIImage *)thumbnail;
-- (UIImage *)thumbnailWithWidth:(int)twidth height:(int)theight;
-
+@interface UIImage (RoundedCorner)
+- (UIImage *)roundedCornerImage:(NSInteger)cornerSize borderSize:(NSInteger)borderSize;
 @end
