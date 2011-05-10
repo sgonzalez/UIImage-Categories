@@ -1,4 +1,4 @@
-A few UIImage categories for creating thumbnails from a UIImage, rounding an images corners, and doing stuff with alpha.
+A few UIImage categories for creating thumbnails from a UIImage, cropping an image, rounding an image's corners, and doing stuff with alpha.
 
 This may be super useful for adding images in UITableViewCells or some kind of cover flow view.
 
