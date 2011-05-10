@@ -1,5 +1,5 @@
 //
-//  UIImage+Thumbnail.h
+//  UIImage+Resize.h
 //
 //  Copyright 2011 Hicaduda. All rights reserved.
 //
@@ -33,9 +33,8 @@
 #import <Foundation/Foundation.h>
 
 
-@interface UIImage (UIImage_Thumbnail)
-
+@interface UIImage (UIImage_Resize)
+- (UIImage *)croppedImage:(CGRect)bounds;
 - (UIImage *)thumbnail;
 - (UIImage *)thumbnailWithWidth:(int)twidth height:(int)theight;
-
 @end

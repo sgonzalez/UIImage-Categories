@@ -1,5 +1,5 @@
 //
-//  UIImage+Thumbnail.m
+//  UIImage+Resize.m
 //
 //  Copyright 2011 Hicaduda. All rights reserved.
 //
@@ -30,10 +30,17 @@
  
  */
 
-#import "UIImage+Thumbnail.h"
+#import "UIImage+Resize.h"
 
 
-@implementation UIImage (UIImage_Thumbnail)
+@implementation UIImage (UIImage_Resize)
+
+- (UIImage *)croppedImage:(CGRect)bounds {
+    CGImageRef imageRef = CGImageCreateWithImageInRect([self CGImage], bounds);
+    UIImage *croppedImage = [UIImage imageWithCGImage:imageRef];
+    CGImageRelease(imageRef);
+    return croppedImage;
+}
 
 - (UIImage *)thumbnailWithWidth:(int)twidth height:(int)theight {
 	CGImageRef tmp = self.CGImage;
