@@ -2,7 +2,7 @@ A few UIImage categories for creating thumbnails from a UIImage, cropping an ima
 
 This may be super useful for adding images in UITableViewCells or some kind of cover flow view.
 
-Usage.m is a file showing the usage of this category, this is NOT a proper category implementation.
+Usage.m is a file showing the usage of these categories, this is NOT a proper category implementation.
 
 There is no attribution required but is greatly appreciated!
 
