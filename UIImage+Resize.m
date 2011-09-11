@@ -55,6 +55,7 @@
     
     CGContextDrawImage(context, CGContextGetClipBoundingBox(context), tmp);
     CGImageRef imgRef = CGBitmapContextCreateImage(context);
+	CGContextRelease(context);
     
     return [UIImage imageWithCGImage:imgRef];
 }
