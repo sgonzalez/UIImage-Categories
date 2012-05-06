@@ -34,6 +34,7 @@
 
 
 @interface UIImage (UIImage_Resize)
+- (UIImage *)scaleProportionallyToSize:(CGSize)targetSize;
 - (UIImage *)croppedImage:(CGRect)bounds;
 - (UIImage *)thumbnail;
 - (UIImage *)thumbnailWithWidth:(int)twidth height:(int)theight;
