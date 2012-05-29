@@ -57,10 +57,7 @@
         CGFloat widthFactor = targetWidth / width;
         CGFloat heightFactor = targetHeight / height;
 		
-        if (widthFactor < heightFactor) 
-			scaleFactor = widthFactor;
-        else
-			scaleFactor = heightFactor;
+		scaleFactor = (heightFactor < widthFactor ? heightFactor : widthFactor);
 		
         scaledWidth  = width * scaleFactor;
         scaledHeight = height * scaleFactor;
